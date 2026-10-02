@@ -3,7 +3,7 @@ services:
   - type: web
     name: compiler-memory-visualizer-frontend
     env: static
-    buildCommand: npm install && npm run build
+    buildCommand: corepack enable && pnpm install --no-frozen-lockfile && pnpm run build
     staticPublishPath: dist
     routes:
       - type: rewrite
