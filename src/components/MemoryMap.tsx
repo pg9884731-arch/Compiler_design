@@ -19,7 +19,7 @@ import {
   Info,
   Sparkles
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { MemoryStep, StackFrame, StackVariable, HeapBlock, StaticVariable, TextInstruction } from '../compiler/types';
 
 interface MemoryMapProps {
