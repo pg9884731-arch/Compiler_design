@@ -1,0 +1,23 @@
+services:
+  # 1. Frontend Static Site
+  - type: web
+    name: compiler-memory-visualizer-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+  # 2. Backend C++ Compiler Service (Docker with g++)
+  - type: web
+    name: compiler-memory-visualizer-api
+    env: docker
+    dockerfilePath: ./server/Dockerfile
+    dockerContext: ./server
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 5000

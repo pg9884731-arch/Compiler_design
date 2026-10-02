@@ -1,0 +1,43 @@
+  <!DOCTYPE html>
+  <html lang="en" class="dark">
+    <head>
+      
+      <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compiler Memory Visualizer | See How Memory Changes While Your Program Runs</title>
+    <meta name="description" content="Interactive Compiler Design, Operating Systems, and Data Structures tool to visualize Stack, Heap, Data Segment, Text Segment, and Symbol Tables in real-time." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      html, body { height: 100%; margin: 0; font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; background-color: #020617; color: #f1f5f9; }
+      #root { height: 100%; }
+      code, pre, .font-mono { font-family: 'Fira Code', monospace !important; }
+      
+      /* Sleek dark scrollbars */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020617;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #334155;
+      }
+    </style>
+      
+    </head>
+
+    <body>
+      
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+      
+    </body>
+  </html>
+  
